@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"strings"
 	"sync"
+	"regexp"
+	"errors"
 
 	"github.com/sourcegraph/sourcegraph/cmd/frontend/backend"
 	"github.com/sourcegraph/sourcegraph/cmd/frontend/graphqlbackend/externallink"
@@ -325,6 +327,29 @@ func (r *gitCommitResolver) repoRevURL() (string, error) {
 		return url + "@" + escapeRevspecForURL(rev), nil
 	}
 	return url, nil
+}
+// returns the URL for access to the ipynb rendered in nbviewer,
+// e.g., "github/githubuser/githubreponame/blob/rev/"
+func (r *gitCommitResolver) repoRevNbURL() (string, error) {
+	url := r.repo.URL()
+	if ok, _ := regexp.MatchString(`(?m)^/github\.com/`, url); !ok {
+		return "", errors.New("The Repo's URL does not start with 'github.com'")
+	}
+	var rev string
+	if r.inputRev != nil {
+		rev = *r.inputRev // use the original input rev from the user
+	} else {
+		oid, err := r.OID()
+		if err != nil {
+			return "", err
+		}
+		rev = string(oid)
+	}
+	if rev != "" {
+		url = strings.Replace(url, "github.com", "github", 1) + "/blob/" + rev
+		return url, nil
+	}
+	return "", errors.New("the rev is null")
 }
 
 func (r *gitCommitResolver) canonicalRepoRevURL() (string, error) {

@@ -57,6 +57,14 @@ func (r *gitTreeEntryResolver) URL(ctx context.Context) (string, error) {
 	return r.urlPath(url), nil
 }
 
+func (r *gitTreeEntryResolver) NBviewerURLPrefix(ctx context.Context) (string, error) {
+	url, err := r.commit.repoRevNbURL()
+	if err != nil {
+		return "", err
+	}
+	return url + "/" + r.path, nil
+}
+
 func (r *gitTreeEntryResolver) CanonicalURL() (string, error) {
 	url, err := r.commit.canonicalRepoRevURL()
 	if err != nil {

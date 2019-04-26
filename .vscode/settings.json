@@ -25,5 +25,15 @@
   "go.docsTool": "gogetdoc",
   "jest.pathToJest": "yarn -s test",
   "jest.showCoverageOnLoad": false,
-  "jest.autoEnable": false // until we confirm people like it
+  "jest.autoEnable": false, // until we confirm people like it
+  "go.delveConfig": {
+    "dlvLoadConfig": {
+      "followPointers": true,
+      "maxVariableRecurse": 1,
+      "maxStringLen": 500,
+      "maxArrayValues": 64,
+      "maxStructFields": -1
+    }
+  },
+  "go.formatTool": "goimports"
 }

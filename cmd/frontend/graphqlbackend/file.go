@@ -9,6 +9,7 @@ import (
 
 	"github.com/sourcegraph/sourcegraph/cmd/frontend/backend"
 	"github.com/sourcegraph/sourcegraph/cmd/frontend/internal/pkg/markdown"
+	"github.com/sourcegraph/sourcegraph/cmd/frontend/internal/pkg/nbconvert"
 	"github.com/sourcegraph/sourcegraph/pkg/api"
 	"github.com/sourcegraph/sourcegraph/pkg/highlight"
 	"github.com/sourcegraph/sourcegraph/pkg/vcs/git"
@@ -40,6 +41,12 @@ func (r *gitTreeEntryResolver) RichHTML(ctx context.Context) (string, error) {
 	switch path.Ext(r.path) {
 	case ".md", ".mdown", ".markdown", ".markdn":
 		break
+	case ".ipynb":
+		url, err := r.NBviewerURLPrefix(ctx)
+		if err != nil {
+			return "", err
+		}
+		return nbconvert.Render(url), nil
 	default:
 		return "", nil
 	}

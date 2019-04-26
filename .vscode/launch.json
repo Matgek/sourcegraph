@@ -137,6 +137,7 @@
       "port": 2354,
       "host": "127.0.0.1",
       "program": "${workspaceRoot}",
+      "showLog": true,
       "env": {},
       "args": []
     },
