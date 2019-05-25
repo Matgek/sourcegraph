@@ -6,6 +6,7 @@ import * as GQL from '../../../../shared/src/graphql/schema'
 import { isSettingsValid, SettingsCascadeProps } from '../../../../shared/src/settings/settings'
 import { Form } from '../../components/Form'
 import { PageTitle } from '../../components/PageTitle'
+import { RepositoriesExploreSection } from '../../repo/explore/RepositoriesExploreSection'
 import { Settings } from '../../schema/settings.schema'
 import { ThemePreferenceProps, ThemeProps } from '../../theme'
 import { eventLogger } from '../../tracking/eventLogger'
@@ -117,6 +118,9 @@ export class SearchPage extends React.Component<Props, State> {
                         </>
                     )}
                 </Form>
+                <div className="container search-page__repos-section">
+                    <RepositoriesExploreSection />
+                </div>
             </div>
         )
     }

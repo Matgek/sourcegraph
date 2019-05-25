@@ -33,7 +33,7 @@ export class RepositoriesExploreSection extends React.PureComponent<Props, State
                   'github.com/ReactiveX/rxjs',
               ]
             : null,
-        first: 4,
+        first: 10,
     }
 
     public state: State = { repositoriesOrError: LOADING }
