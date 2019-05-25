@@ -77,7 +77,7 @@ export class SurveyToast extends React.Component<Props, State> {
             <Toast
                 icon={<EmoticonIcon className="icon-inline" />}
                 title="Tell us what you think"
-                subtitle="How likely is it that you would recommend Sourcegraph to a friend?"
+                subtitle="How likely is it that you would recommend NBShare to a friend?"
                 cta={<SurveyCTA onClick={this.onClickScore} openSurveyInNewTab={true} />}
                 onDismiss={this.onDismiss}
             />

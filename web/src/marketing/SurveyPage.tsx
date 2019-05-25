@@ -52,7 +52,7 @@ class SurveyForm extends React.Component<SurveyFormProps, SurveyFormState> {
             <Form className="survey-form" onSubmit={this.handleSubmit}>
                 {this.state.error && <p className="survey-form__error">{this.state.error.message}</p>}
                 <label className="survey-form__label">
-                    How likely is it that you would recommend Sourcegraph to a friend?
+                    How likely is it that you would recommend NBShare to a friend?
                 </label>
                 <SurveyCTA className="survey-form__scores" onClick={this.onScoreChange} score={this.props.score} />
                 {!this.props.authenticatedUser && (
