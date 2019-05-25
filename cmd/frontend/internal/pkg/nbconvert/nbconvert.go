@@ -1,9 +1,10 @@
 package nbconvert
 
-/* import (
-	"fmt"
-	"io/ioutil"
-) */
+import (
+	"github.com/sourcegraph/sourcegraph/pkg/env"
+)
+
+var nbviewerBaseURL = env.Get("SRC_NBVIEWER_URL", "", "the base url of nbviewer service")
 
 func Render(url string) string {
 	/* html, err := ioutil.ReadFile("cmd/frontend/internal/pkg/nbconvert/Part.3.B.4.regex1.html")
@@ -12,8 +13,8 @@ func Render(url string) string {
 		return ""
 	} */
 	// nbviewerBaseURL := "https://nbviewer.jupyter.org"
-	nbviewerBaseURL := "http://localhost:5000"
+	// nbviewerBaseURL := "http://119.3.32.184:8080"
 	fullURL := nbviewerBaseURL + url
-	reHtml := `<iframe src="` + fullURL + `" style="position: absolute; width:100%; height: 100%;border: none;"></iframe>`
+	reHtml := `<iframe src="` + fullURL + `"style="width:100%; height:70rem; border: none;"></iframe>`
 	return reHtml
 }
