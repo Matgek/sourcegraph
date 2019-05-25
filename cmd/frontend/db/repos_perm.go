@@ -35,9 +35,10 @@ func authzFilter(ctx context.Context, repos []*types.Repo, p authz.Perm) ([]*typ
 		if err != nil {
 			return nil, err
 		}
-		if currentUser.SiteAdmin {
-			return repos, nil
-		}
+		// if currentUser.SiteAdmin {
+		// 	return repos, nil
+		// }
+		return repos, nil
 	}
 
 	filteredRepoNames, err := getFilteredRepoNames(ctx, currentUser, authz.ToRepos(repos), p)
