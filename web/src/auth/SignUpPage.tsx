@@ -91,7 +91,7 @@ export class SignUpForm extends React.Component<SignUpFormProps, SignUpFormState
                         autoComplete="new-password"
                     />
                 </div>
-                {enterpriseTrial && (
+                {/* {enterpriseTrial && (
                     <div className="form-group">
                         <label className="signin-signup-form__checkbox-label">
                             <input className="mr-1" type="checkbox" onChange={this.onRequestTrialFieldChange} />
@@ -101,7 +101,7 @@ export class SignUpForm extends React.Component<SignUpFormProps, SignUpFormState
                             </a>
                         </label>
                     </div>
-                )}
+                )} */}
                 <div className="form-group">
                     <button className="btn btn-primary btn-block" type="submit" disabled={this.state.loading}>
                         {this.state.loading ? (
