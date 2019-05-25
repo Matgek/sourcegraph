@@ -3,7 +3,6 @@ import * as React from 'react'
 import { Subscription } from 'rxjs'
 import { ActionsNavItems } from '../../../shared/src/actions/ActionsNavItems'
 import { ContributableMenu } from '../../../shared/src/api/protocol'
-import { CommandListPopoverButton } from '../../../shared/src/commandPalette/CommandList'
 import { ActivationProps } from '../../../shared/src/components/activation/Activation'
 import { ActivationDropdown } from '../../../shared/src/components/activation/ActivationDropdown'
 import { Link } from '../../../shared/src/components/Link'
@@ -109,13 +108,13 @@ export class NavLinks extends React.PureComponent<Props> {
                         )}
                     </>
                 )}
-                {this.props.location.pathname !== '/welcome' && (
+                {/* {this.props.location.pathname !== '/welcome' && (
                     <CommandListPopoverButton
                         {...this.props}
                         menu={ContributableMenu.CommandPalette}
                         toggleVisibilityKeybinding={this.props.keybindings.commandPalette}
                     />
-                )}
+                )} */}
                 {this.props.authenticatedUser && (
                     <li className="nav-item">
                         <UserNavItem
