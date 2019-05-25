@@ -72,6 +72,23 @@ export function replaceRevisionInURL(href: string, newRev: string): string {
 }
 
 /**
+ * Convert to the URL for Binder running
+ * @param href the url to be converted
+ */
+export function toBinderURL(href: string): string {
+    const parsed = parseBrowserRepoURL(window.location.href)
+    const binderHostURL = 'https://mybinder.org/v2/'
+    let repoNameInBinderFormat = parsed.repoName
+    if (repoNameInBinderFormat.startsWith('github.com')) {
+        repoNameInBinderFormat = `gh${repoNameInBinderFormat.slice(10)}`
+    }
+    const baseURL = parsed.rev
+        ? `${binderHostURL}${repoNameInBinderFormat}/${parsed.rev}?urlpath=lab`
+        : `${binderHostURL}${repoNameInBinderFormat}/master?urlpath=lab`
+    return parsed.filePath ? `${baseURL}/tree/${parsed.filePath}` : `${baseURL}`
+}
+
+/**
  * Parses the properties of a blob URL.
  */
 export function parseBrowserRepoURL(href: string): ParsedRepoURI {

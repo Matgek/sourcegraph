@@ -20,6 +20,7 @@ import { ThemeProps } from '../theme'
 import { RouteDescriptor } from '../util/contributions'
 import { CopyLinkAction } from './actions/CopyLinkAction'
 import { GoToPermalinkAction } from './actions/GoToPermalinkAction'
+import { GoToRunningAction } from './actions/GoToRunningAction'
 import { CloneInProgressError, ECLONEINPROGESS, EREPONOTFOUND, EREVNOTFOUND, ResolvedRev, resolveRev } from './backend'
 import { RepoHeaderContributionsLifecycleProps } from './RepoHeader'
 import { RepoHeaderContributionPortal } from './RepoHeaderContributionPortal'
@@ -270,6 +271,12 @@ export class RepoRevContainer extends React.PureComponent<RepoRevContainerProps,
                             history={this.props.history}
                         />
                     }
+                    repoHeaderContributionsLifecycleProps={this.props.repoHeaderContributionsLifecycleProps}
+                />
+                <RepoHeaderContributionPortal
+                    position="right"
+                    priority={1}
+                    element={<GoToRunningAction key="go-to-running" location={this.props.location} />}
                     repoHeaderContributionsLifecycleProps={this.props.repoHeaderContributionsLifecycleProps}
                 />
             </div>
