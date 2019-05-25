@@ -38,6 +38,7 @@ import { ThemeProps } from '../theme'
 import { eventLogger } from '../tracking/eventLogger'
 import { basename } from '../util/path'
 import { fetchTree } from './backend'
+import { ReadMe } from './blob/ReadMe'
 import { GitCommitNode, GitCommitNodeProps } from './commits/GitCommitNode'
 import { gitCommitFragment } from './commits/RepositoryCommitsPage'
 
@@ -288,6 +289,14 @@ export class TreePage extends React.PureComponent<Props, State> {
                                     <SearchButton activation={this.props.activation} />
                                 </Form>
                             </section>
+                            <ReadMe
+                                repoName={this.props.repoName}
+                                commitID={this.props.commitID}
+                                filePath={this.props.filePath + '/README.md'}
+                                isLightTheme={this.props.isLightTheme}
+                                disableTimeout={false}
+                                location={this.props.location}
+                            />
                             <TreeEntriesSection
                                 title="Files and directories"
                                 parentPath={this.props.filePath}
