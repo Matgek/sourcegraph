@@ -97,7 +97,7 @@ export class RepoSettingsOptionsPage extends React.PureComponent<Props, State> {
                 />
                 <ActionContainer
                     title="Delete repository"
-                    description="Permanently removes this repository and all associated data from Sourcegraph. The original repository on the code host is not affected. If this repository was added by a configured code host, then it will be re-added during the next sync."
+                    description="Permanently removes this repository and all associated data from NBShare. The original repository on the code host is not affected. If this repository was added by a configured code host, then it will be re-added during the next sync."
                     buttonClassName="btn-danger"
                     buttonLabel="Delete this repository"
                     run={this.deleteRepository}

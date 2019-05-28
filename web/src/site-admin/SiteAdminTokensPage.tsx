@@ -54,7 +54,7 @@ export class SiteAdminTokensPage extends React.PureComponent<Props, State> {
                         <AddIcon className="icon-inline" /> Generate access token
                     </Link>
                 </div>
-                <p>Tokens may be used to access the Sourcegraph API with the full privileges of the token's creator.</p>
+                <p>Tokens may be used to access the NBShare API with the full privileges of the token's creator.</p>
                 <FilteredAccessTokenConnection
                     className="list-group list-group-flush mt-3"
                     noun="access token"

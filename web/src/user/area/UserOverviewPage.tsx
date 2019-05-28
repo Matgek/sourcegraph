@@ -29,7 +29,7 @@ export class UserOverviewPage extends React.PureComponent<Props, State> {
                     ) : (
                         this.props.user.username
                     )}{' '}
-                    started using Sourcegraph <Timestamp date={this.props.user.createdAt} />.
+                    started using NBShare <Timestamp date={this.props.user.createdAt} />.
                 </p>
             </div>
         )

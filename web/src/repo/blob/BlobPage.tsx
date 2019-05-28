@@ -164,7 +164,7 @@ export class BlobPage extends React.PureComponent<Props, State> {
                 .subscribe(blobOrError => this.setState({ blobOrError }), err => console.error(err))
         )
 
-        // Clear the Sourcegraph extensions model's component when the blob is no longer shown.
+        // Clear the NBShare extensions model's component when the blob is no longer shown.
         this.subscriptions.add(() =>
             this.props.extensionsController.services.model.model.next({
                 ...this.props.extensionsController.services.model.model.value,

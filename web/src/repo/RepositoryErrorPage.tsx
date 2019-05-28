@@ -205,8 +205,8 @@ export class RepositoryErrorPage extends React.PureComponent<Props, State> {
                                         )}
                                         {this.state.canAddOrError === true && (
                                             <>
-                                                As a site admin, you can add this repository to Sourcegraph to allow
-                                                users to search and view it by{' '}
+                                                As a site admin, you can add this repository to NBShare to allow users
+                                                to search and view it by{' '}
                                                 <a href="/site-admin/external-services">
                                                     connecting an external service
                                                 </a>
@@ -247,7 +247,7 @@ export class RepositoryErrorPage extends React.PureComponent<Props, State> {
                             </div>
                         )}
                         {!this.state.showAdd && !this.state.showEnable && (
-                            <p>To access this repository, contact the Sourcegraph admin.</p>
+                            <p>To access this repository, contact the NBShare admin.</p>
                         )}
                     </div>
                 }

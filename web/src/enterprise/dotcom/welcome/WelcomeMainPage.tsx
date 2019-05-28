@@ -119,7 +119,7 @@ export class WelcomeMainPage extends React.Component<Props> {
                                     </a>
                                     <small className="text-muted d-block">
                                         Adds go-to-definition and find-references to GitHub and other code hosts. For
-                                        private code, connect it to your self-hosted Sourcegraph instance.
+                                        private code, connect it to your self-hosted NBShare instance.
                                     </small>
                                 </div>
                                 {!this.props.authenticatedUser && (
@@ -130,10 +130,10 @@ export class WelcomeMainPage extends React.Component<Props> {
                                             className="welcome-main-page__sign-up"
                                             onClick={() => eventLogger.log('WelcomeSignUpForSourcegraphDotCom')}
                                         >
-                                            Sign up on Sourcegraph.com
+                                            Sign up on NBShare1.com
                                         </Link>
                                         <small className="text-muted d-block">
-                                            A public Sourcegraph instance for public code only.
+                                            A public NBShare instance for public code only.
                                         </small>
                                     </div>
                                 )}

@@ -62,7 +62,7 @@ export class SiteAdminExternalAccountsPage extends React.Component<Props> {
                 </div>
                 <p>
                     An external account (on an <Link to="/site-admin/auth/providers">authentication provider</Link>) is
-                    linked to a Sourcegraph user when it's used to sign into Sourcegraph.
+                    linked to a NBShare user when it's used to sign into NBShare.
                 </p>
                 <FilteredExternalAccountConnection
                     className="list-group list-group-flush mt-3"

@@ -13,11 +13,11 @@ export const DockerForMacAlert: React.FunctionComponent<{ className?: string }> 
     >
         <span className="docker-for-mac-alert__left">
             It looks like you're using Docker for Mac. Due to known issues related to Docker for Mac's file system
-            access, search performance and cloning repositories on Sourcegraph will be much slower.
+            access, search performance and cloning repositories on NBShare will be much slower.
         </span>
         <span className="docker-for-mac-alert__right">
-            <Link to="/help/admin">Run Sourcegraph on a different platform or deploy it to a server</Link> for much
-            faster performance.
+            <Link to="/help/admin">Run NBShare on a different platform or deploy it to a server</Link> for much faster
+            performance.
         </span>
     </DismissibleAlert>
 )

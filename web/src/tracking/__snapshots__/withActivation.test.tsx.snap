@@ -2,20 +2,20 @@
 
 exports[`withActivation no user 1`] = `
 <div>
-  activation JSON: 
+  activation JSON:
   undefined
 </div>
 `;
 
 exports[`withActivation user, admin 1`] = `
 <div>
-  activation JSON: 
+  activation JSON:
   {
   "steps": [
     {
       "id": "ConnectedCodeHost",
       "title": "Connect your code host",
-      "detail": "Configure Sourcegraph to talk to your code host and fetch a list of your repositories.",
+      "detail": "Configure NBShare to talk to your code host and fetch a list of your repositories.",
       "link": {
         "to": "/site-admin/external-services"
       }
@@ -57,7 +57,7 @@ exports[`withActivation user, admin 1`] = `
 
 exports[`withActivation user, non-admin 1`] = `
 <div>
-  activation JSON: 
+  activation JSON:
   {
   "steps": [
     {

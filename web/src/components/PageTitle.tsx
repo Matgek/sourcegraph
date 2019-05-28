@@ -29,6 +29,6 @@ export class PageTitle extends React.Component<Props, {}> {
     }
 
     private updateTitle(title?: string): void {
-        document.title = title ? `${title} - Sourcegraph` : 'Sourcegraph'
+        document.title = title ? `${title} - NBShare` : 'NBShare'
     }
 }

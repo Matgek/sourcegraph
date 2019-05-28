@@ -61,7 +61,7 @@ export class ErrorBoundary extends React.PureComponent<Props, State> {
                         title="Reload required"
                         subtitle={
                             <div className="container">
-                                <p>A new version of Sourcegraph is available.</p>
+                                <p>A new version of NBShare is available.</p>
                                 <button className="btn btn-primary" onClick={this.onReloadClick}>
                                     Reload to update
                                 </button>
@@ -78,8 +78,8 @@ export class ErrorBoundary extends React.PureComponent<Props, State> {
                     subtitle={
                         <div className="container">
                             <p>
-                                Sourcegraph encountered an unexpected error. If reloading the page doesn't fix it,
-                                contact your site admin or Sourcegraph support.
+                                NBShare encountered an unexpected error. If reloading the page doesn't fix it, contact
+                                your site admin or Sourcegraph support.
                             </p>
                             <p>
                                 <code>{this.state.error.message}</code>

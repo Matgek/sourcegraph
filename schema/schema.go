@@ -17,7 +17,7 @@ type AWSCodeCommitConnection struct {
 	SecretAccessKey             string `json:"secretAccessKey"`
 }
 
-// AuthAccessTokens description: Settings for access tokens, which enable external tools to access the Sourcegraph API with the privileges of the user.
+// AuthAccessTokens description: Settings for access tokens, which enable external tools to access the NBShare API with the privileges of the user.
 type AuthAccessTokens struct {
 	Allow string `json:"allow,omitempty"`
 }

@@ -20,7 +20,7 @@ const DATA: { title: string; description: string; url: string; backgroundImage: 
     },
     {
         title: 'Editor extensions',
-        description: 'Jump to Sourcegraph from your editor.',
+        description: 'Jump to NBShare from your editor.',
         url: '/help/integration/editor',
         backgroundImage:
             'linear-gradient(100deg, #36334c, #2b5897), linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1))',

@@ -286,7 +286,7 @@ export class Blob extends React.Component<BlobProps, BlobState> {
             share()
         )
 
-        // Update the Sourcegraph extensions model to reflect the current file.
+        // Update the NBShare extensions model to reflect the current file.
         this.subscriptions.add(
             combineLatest(modelChanges, locationPositions).subscribe(([model, pos]) => {
                 this.props.extensionsController.services.model.model.next({

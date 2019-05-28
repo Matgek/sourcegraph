@@ -17,7 +17,7 @@ Sourcegraph integrates with your other tools to help you search, navigate, and r
   - [Datadog](https://sourcegraph.com/extensions/sourcegraph/datadog-metrics)
   - [LightStep](lightstep.md)
   - [View all "External services" extensions](https://sourcegraph.com/extensions?query=category%3A%22External+services%22)
-- [Editor plugins](editor.md): jump to Sourcegraph from your editor
+- [Editor plugins](editor.md): jump to NBShare from your editor
 - [Search shortcuts](browser_search_engine.md): quickly search from your browser
 - [GraphQL API](../api/graphql/index.md): create custom tools using Sourcegraph data
 

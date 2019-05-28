@@ -183,7 +183,7 @@ export class UserAccountEmailsPage extends React.Component<Props, State> {
                 <h2>Emails</h2>
                 {this.state.siteFlags && !this.state.siteFlags.sendsEmailVerificationEmails && (
                     <div className="alert alert-warning mt-2">
-                        Sourcegraph is not configured to send email verifications. Newly added email addresses must be
+                        NBShare is not configured to send email verifications. Newly added email addresses must be
                         manually verified by a site admin.
                     </div>
                 )}

@@ -31,7 +31,7 @@ export class SignInPage extends React.Component<SignInPageProps> {
                 <PageTitle title="Sign in" />
                 <HeroPage
                     icon={KeyIcon}
-                    title="Sign into Sourcegraph"
+                    title="Sign into NBShare"
                     body={
                         window.context.authProviders && window.context.authProviders.length > 0 ? (
                             window.context.authProviders.map((p, i) =>

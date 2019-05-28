@@ -9,7 +9,7 @@ interface Props extends RouteComponentProps<{}> {
 }
 
 /**
- * A page that is shown when the Sourcegraph instance has not yet been initialized.
+ * A page that is shown when the NBShare instance has not yet been initialized.
  * Only the person who first accesses the instance will see this.
  */
 export class SiteInitPage extends React.Component<Props> {
@@ -31,12 +31,12 @@ export class SiteInitPage extends React.Component<Props> {
                         // the site_config DB table.
                         <p>
                             You're signed in as <strong>{this.props.authenticatedUser.username}</strong>. A site admin
-                            must initialize Sourcegraph before you can continue.
+                            must initialize NBShare before you can continue.
                         </p>
                     ) : (
                         <>
                             <h2 className="site-init-page__header">Welcome</h2>
-                            <p>Create an admin account to start using Sourcegraph.</p>
+                            <p>Create an admin account to start using NBShare.</p>
                             <SignUpForm
                                 buttonLabel="Create admin account & continue"
                                 doSignUp={this.doSiteInit}

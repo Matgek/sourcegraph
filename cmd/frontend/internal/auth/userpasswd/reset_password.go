@@ -78,18 +78,18 @@ func HandleResetPasswordInit(w http.ResponseWriter, r *http.Request) {
 
 var (
 	resetPasswordEmailTemplates = txemail.MustValidate(txtypes.Templates{
-		Subject: `Reset your Sourcegraph password`,
+		Subject: `Reset your NBShare password`,
 		Text: `
-Somebody (likely you) requested a password reset for the user {{.Username}} on Sourcegraph.
+Somebody (likely you) requested a password reset for the user {{.Username}} on NBShare.
 
-To reset the password for {{.Username}} on Sourcegraph, follow this link:
+To reset the password for {{.Username}} on NBShare, follow this link:
 
   {{.URL}}
 `,
 		HTML: `
 <p>
   Somebody (likely you) requested a password reset for <strong>{{.Username}}</strong>
-  on Sourcegraph.
+  on NBShare.
 </p>
 
 <p><strong><a href="{{.URL}}">Reset password for {{.Username}}</a></strong></p>

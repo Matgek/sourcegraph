@@ -146,7 +146,7 @@ export class RepoContainer extends React.Component<RepoContainerProps, RepoRevCo
             )
         )
 
-        // Update the Sourcegraph extensions model to reflect the current workspace root.
+        // Update the NBShare extensions model to reflect the current workspace root.
         this.subscriptions.add(
             this.revResolves
                 .pipe(

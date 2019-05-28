@@ -120,7 +120,7 @@ const getActivationSteps = (authenticatedUser: GQL.IUser): ActivationStep[] => {
         {
             id: 'ConnectedCodeHost',
             title: 'Connect your code host',
-            detail: 'Configure Sourcegraph to talk to your code host and fetch a list of your repositories.',
+            detail: 'Configure NBShare to talk to your code host and fetch a list of your repositories.',
             link: { to: '/site-admin/external-services' },
             siteAdminOnly: true,
         },

@@ -34,7 +34,7 @@ export function createPlatformContext(): PlatformContext {
                 throw new Error(
                     `Unable to ${editDescription} because you are not signed in.` +
                         '\n\n' +
-                        `[**Sign into Sourcegraph${
+                        `[**Sign into NBShare${
                             u.hostname === 'sourcegraph.com' ? '' : ` on ${u.host}`
                         }**](${`${u.href.replace(/\/$/, '')}/sign-in`})`
                 )

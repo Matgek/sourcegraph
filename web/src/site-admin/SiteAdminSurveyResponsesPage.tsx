@@ -78,7 +78,7 @@ class SurveyResponseNode extends React.PureComponent<SurveyResponseNodeProps, Su
                         {this.props.node.reason && this.props.node.better && <div className="mt-2" />}
                         {this.props.node.better && this.props.node.better !== '' && (
                             <>
-                                <dt>What could Sourcegraph do to provide a better product?</dt>
+                                <dt>What could NBShare do to provide a better product?</dt>
                                 <dd>{this.props.node.better}</dd>
                             </>
                         )}
@@ -177,7 +177,7 @@ class UserSurveyResponseNode extends React.PureComponent<UserSurveyResponseNodeP
                                         {response.reason && response.better && <div className="mt-2" />}
                                         {response.better && response.better !== '' && (
                                             <>
-                                                <dt>What could Sourcegraph do to provide a better product?</dt>
+                                                <dt>What could NBShare do to provide a better product?</dt>
                                                 <dd>{response.better}</dd>
                                             </>
                                         )}
@@ -294,9 +294,9 @@ export class SiteAdminSurveyResponsesPage extends React.Component<Props, State> 
                     <h2 className="mb-0">Survey responses</h2>
                 </div>
                 <p>
-                    After using Sourcegraph for a few days, users are presented with a request to answer "How likely is
-                    it that you would recommend Sourcegraph to a friend?" on a scale from 0–10 and to provide some
-                    feedback. Responses are visible below (and are also sent to Sourcegraph).
+                    After using NBShare for a few days, users are presented with a request to answer "How likely is it
+                    that you would recommend NBShare to a friend?" on a scale from 0–10 and to provide some feedback.
+                    Responses are visible below (and are also sent to NBShare).
                 </p>
 
                 <SiteAdminSurveyResponsesSummary />

@@ -73,7 +73,7 @@ export class UserAccountTokensPage extends React.PureComponent<Props, State> {
                         <AddIcon className="icon-inline" /> Generate new token
                     </Link>
                 </div>
-                <p>Access tokens may be used to access the Sourcegraph API.</p>
+                <p>Access tokens may be used to access the NBShare API.</p>
                 <FilteredAccessTokenConnection
                     listClassName="list-group list-group-flush"
                     noun="access token"

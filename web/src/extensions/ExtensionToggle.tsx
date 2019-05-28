@@ -103,7 +103,7 @@ export class ExtensionToggle extends React.PureComponent<Props> {
  */
 function confirmAddExtension(extensionID: string): boolean {
     return confirm(
-        `Add Sourcegraph extension ${extensionID}?\n\nIt can:\n- Read repositories and files you view using Sourcegraph\n- Read and change your Sourcegraph settings`
+        `Add NBShare extension ${extensionID}?\n\nIt can:\n- Read repositories and files you view using NBShare\n- Read and change your NBShare settings`
     )
 }
 

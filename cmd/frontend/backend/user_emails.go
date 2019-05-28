@@ -153,14 +153,14 @@ func SendUserEmailVerificationEmail(ctx context.Context, email, code string) err
 
 var (
 	verifyEmailTemplates = txemail.MustValidate(txtypes.Templates{
-		Subject: `Verify your email on Sourcegraph`,
+		Subject: `Verify your email on NBShare`,
 		Text: `
-Verify your email address {{printf "%q" .Email}} on Sourcegraph by following this link:
+Verify your email address {{printf "%q" .Email}} on NBShare by following this link:
 
   {{.URL}}
 `,
 		HTML: `
-<p>Verify your email address {{printf "%q" .Email}} on Sourcegraph by following this link:</p>
+<p>Verify your email address {{printf "%q" .Email}} on NBShare by following this link:</p>
 
 <p><strong><a href="{{.URL}}">Verify email address</a></p>
 `,

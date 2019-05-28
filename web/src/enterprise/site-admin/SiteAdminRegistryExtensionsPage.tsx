@@ -179,8 +179,8 @@ export class SiteAdminRegistryExtensionsPage extends React.PureComponent<Props> 
                     </div>
                 </div>
                 <p>
-                    Extensions add features to Sourcegraph and other connected tools (such as editors, code hosts, and
-                    code review tools).
+                    Extensions add features to NBShare and other connected tools (such as editors, code hosts, and code
+                    review tools).
                 </p>
                 <FilteredConnection<GQL.IRegistryExtension, Pick<RegistryExtensionNodeSiteAdminProps, 'onDidUpdate'>>
                     className="list-group list-group-flush registry-extensions-list"

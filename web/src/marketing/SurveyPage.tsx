@@ -80,7 +80,7 @@ class SurveyForm extends React.Component<SurveyFormProps, SurveyFormState> {
                     />
                 </div>
                 <div className="form-group">
-                    <label className="survey-form__label">What could Sourcegraph do to provide a better product?</label>
+                    <label className="survey-form__label">What could NBShare do to provide a better product?</label>
                     <textarea
                         className={`form-control survey-form__input`}
                         onChange={this.onBetterProductFieldChange}
@@ -100,8 +100,8 @@ class SurveyForm extends React.Component<SurveyFormProps, SurveyFormState> {
                 )}
                 <div>
                     <small>
-                        Your response to this survey will be sent to Sourcegraph, and will be visible to your
-                        Sourcegraph site admins.
+                        Your response to this survey will be sent to NBShare, and will be visible to NBShare site
+                        admins.
                     </small>
                 </div>
             </Form>

@@ -218,7 +218,7 @@ export class RepoSettingsIndexPage extends React.PureComponent<Props, State> {
                         </>
                     ) : (
                         <div className="alert alert-info">
-                            This Sourcegraph site has not enabled indexed search. See{' '}
+                            NBShare has not enabled indexed search. See{' '}
                             <Link to="/help/admin/search">search documentation</Link> for information on how to enable
                             it.
                         </div>

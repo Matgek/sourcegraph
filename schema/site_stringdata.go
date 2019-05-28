@@ -124,7 +124,7 @@ const SiteSchemaJSON = `{
       "group": "External services"
     },
     "auth.accessTokens": {
-      "description": "Settings for access tokens, which enable external tools to access the Sourcegraph API with the privileges of the user.",
+      "description": "Settings for access tokens, which enable external tools to access the NBShare API with the privileges of the user.",
       "type": "object",
       "additionalProperties": false,
       "properties": {
