@@ -76,6 +76,13 @@ export class NavLinks extends React.PureComponent<Props> {
                         </Link>
                     </li>
                 )}
+                {
+                    <li className="nav-item">
+                        <Link to="https://github.com/nbshare/nbshare-doc" className="nav-link">
+                            Doc
+                        </Link>
+                    </li>
+                }
                 {!this.props.authenticatedUser && (
                     <>
                         {this.props.location.pathname !== '/welcome' && (
