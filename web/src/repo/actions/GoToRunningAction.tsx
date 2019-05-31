@@ -1,7 +1,6 @@
 import * as H from 'history'
-import ArrowRightDropCircleIcon from 'mdi-react/ArrowRightDropCircleIcon'
 import * as React from 'react'
-import { toBinderURL } from '../../util/url'
+import { toRunningURL } from '../../util/url'
 
 /**
  * A repository header action that redirect to a binder instance running the repo in a container.
@@ -14,17 +13,28 @@ export class GoToRunningAction extends React.PureComponent<{
     }
 
     public render(): JSX.Element | null {
+        const runningLink = toRunningURL()
         return (
-            <a href={this.runningURL} target="_blank" data-tooltip="RUN this Repo">
-                <button className="btn btn-primary">
-                    <ArrowRightDropCircleIcon className="icon-inline" />
-                    <span className="d-none d-lg-inline"> Run </span>
-                </button>
-            </a>
+            <div>
+                <a href={runningLink.binderURL} target="_blank" data-tooltip="Run in Binder(JupyterLab)">
+                    <button className="btn run-button btn-secondary">
+                        <img className="icon-inline" src="/.assets/img/binder-logo.png" />
+                        <span className="d-none d-lg-inline"> Binder </span>
+                    </button>
+                </a>
+                <a href={runningLink.floyldURL} target="_blank" data-tooltip="Run in FloyldHub">
+                    <button className="btn run-button btn-secondary">
+                        <img className="icon-inline" src="/.assets/img/FloyldHub-logo.png" />
+                        <span className="d-none d-lg-inline"> Floyld </span>
+                    </button>
+                </a>
+                <a href={runningLink.colabURL} target="_blank" data-tooltip="Run in Google Colab">
+                    <button className="btn run-button btn-secondary">
+                        <img className="icon-inline" src="/.assets/img/colab_favicon_256px.png" />
+                        <span className="d-none d-lg-inline"> Colab </span>
+                    </button>
+                </a>
+            </div>
         )
-    }
-
-    private get runningURL(): string {
-        return toBinderURL(this.props.location.pathname + this.props.location.search + this.props.location.hash)
     }
 }

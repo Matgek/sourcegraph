@@ -72,20 +72,34 @@ export function replaceRevisionInURL(href: string, newRev: string): string {
 }
 
 /**
- * Convert to the URL for Binder running
- * @param href the url to be converted
+ * Convert to the URL for running
  */
-export function toBinderURL(href: string): string {
+export function toRunningURL(): { binderURL: string; colabURL: string; floyldURL: string } {
     const parsed = parseBrowserRepoURL(window.location.href)
     const binderHostURL = 'https://mybinder.org/v2/'
-    let repoNameInBinderFormat = parsed.repoName
-    if (repoNameInBinderFormat.startsWith('github.com')) {
-        repoNameInBinderFormat = `gh${repoNameInBinderFormat.slice(10)}`
-    }
-    const baseURL = parsed.rev
+    const colabHostURL = 'https://colab.research.google.com/'
+    const floyldHostURL = 'https://floydhub.com/run'
+
+    // put together the link to run this repo or notebook in mybinder.com .
+    const repoNameInBinderFormat = parsed.repoName.startsWith('github.com') ? `gh${parsed.repoName.slice(10)}` : null
+    const binderBaseURL = parsed.rev
         ? `${binderHostURL}${repoNameInBinderFormat}/${parsed.rev}?urlpath=lab`
         : `${binderHostURL}${repoNameInBinderFormat}/master?urlpath=lab`
-    return parsed.filePath ? `${baseURL}/tree/${parsed.filePath}` : `${baseURL}`
+    const binderLink = parsed.filePath ? `${binderBaseURL}/tree/${parsed.filePath}` : `${binderBaseURL}`
+
+    // link to colab
+    const repoNameInColabFormat = parsed.repoName.startsWith('github.com') ? `github${parsed.repoName.slice(10)}` : null
+    const colabBaseURL = parsed.rev
+        ? `${colabHostURL}${repoNameInColabFormat}/blob/${parsed.rev}`
+        : `${colabHostURL}${repoNameInColabFormat}/blob/master`
+    const colabLink =
+        parsed.filePath && parsed.filePath.endsWith('.ipynb') ? `${colabBaseURL}/${parsed.filePath}` : `${colabBaseURL}`
+
+    // link to FloydHub
+    const floyldLink = parsed.repoName.startsWith('github.com')
+        ? `${floyldHostURL}?template=https://github.com${parsed.repoName.slice(10)}`
+        : `${floyldHostURL}`
+    return { binderURL: binderLink, colabURL: colabLink, floyldURL: floyldLink }
 }
 
 /**
