@@ -30,15 +30,15 @@
         &:not(&--full) {
             width: 1.5rem;
             &:hover {
-                animation: spin 0.5s ease-in-out 1;
+                animation: spin 1s ease-in-out 1;
 
                 @keyframes spin {
                     50% {
-                        transform: rotate(180deg) scale(1.2);
+                        transform: rotate(360deg) scale(1.2);
                     }
 
                     100% {
-                        transform: rotate(180deg) scale(1);
+                        transform: rotate(360deg) scale(1);
                     }
                 }
             }
