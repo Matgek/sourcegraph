@@ -22,10 +22,10 @@ export class GoToRunningAction extends React.PureComponent<{
                         <span className="d-none d-lg-inline"> Binder </span>
                     </button>
                 </a>
-                <a href={runningLink.floyldURL} target="_blank" data-tooltip="Run in FloyldHub">
+                <a href={runningLink.floyldURL} target="_blank" data-tooltip="Run in FloydHub">
                     <button className="btn run-button btn-secondary">
                         <img className="icon-inline" src="/.assets/img/FloyldHub-logo.png" />
-                        <span className="d-none d-lg-inline"> Floyld </span>
+                        <span className="d-none d-lg-inline"> FloydHub </span>
                     </button>
                 </a>
                 <a href={runningLink.colabURL} target="_blank" data-tooltip="Run in Google Colab">
