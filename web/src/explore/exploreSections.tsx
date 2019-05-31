@@ -20,7 +20,12 @@ export const exploreSections: ReadonlyArray<ExploreSectionDescriptor> = [
     {
         render: props => <ExtensionViewsExploreSection {...props} />,
     },
-    { render: props => <IntegrationsExploreSection {...props} /> },
+    {
+        render: props =>
+            props.authenticatedUser && props.authenticatedUser.siteAdmin ? (
+                <IntegrationsExploreSection {...props} />
+            ) : null,
+    },
     {
         render: props => <RepositoriesExploreSection {...props} />,
     },
@@ -28,7 +33,10 @@ export const exploreSections: ReadonlyArray<ExploreSectionDescriptor> = [
         render: props => <SavedSearchesExploreSection {...props} />,
     },
     {
-        render: props => <SiteUsageExploreSection {...props} />,
+        render: props =>
+            props.authenticatedUser && props.authenticatedUser.siteAdmin ? (
+                <SiteUsageExploreSection {...props} />
+            ) : null,
         condition: ({ authenticatedUser }) =>
             (!window.context.sourcegraphDotComMode || window.context.debug) && !!authenticatedUser,
     },
