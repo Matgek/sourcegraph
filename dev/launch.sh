@@ -58,7 +58,9 @@ export SRC_PROF_SERVICES=$(cat dev/src-prof-services.json)
 export OVERRIDE_AUTH_SECRET=sSsNGlI8fBDftBz0LDQNXEnP6lrWdt9g0fK6hoFvGQ
 export DEPLOY_TYPE=dev
 export ZOEKT_HOST=localhost:6070
-export SRC_NBVIEWER_URL=http://119.3.32.184:8080
+
+# export SRC_NBVIEWER_URL=http://119.3.32.184:8080
+export SRC_NBVIEWER_URL=https://nbviewer.jupyter.org
 
 # webpack-dev-server is a proxy running on port 3080 that (1) serves assets, waiting to respond
 # until they are (re)built and (2) otherwise proxies to nginx running on port 3081 (which proxies to

@@ -69,7 +69,7 @@ class SurveyForm extends React.Component<SurveyFormProps, SurveyFormState> {
                 )}
                 <div className="form-group">
                     <label className="survey-form__label">
-                        What is the most important reason for the score you gave Sourcegraph?
+                        What is the most important reason for the score you gave NBShare?
                     </label>
                     <textarea
                         className={`form-control survey-form__input`}

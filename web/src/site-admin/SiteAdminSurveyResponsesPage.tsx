@@ -71,7 +71,7 @@ class SurveyResponseNode extends React.PureComponent<SurveyResponseNodeProps, Su
                     <dl className="mt-3">
                         {this.props.node.reason && this.props.node.reason !== '' && (
                             <>
-                                <dt>What is the most important reason for the score you gave Sourcegraph?</dt>
+                                <dt>What is the most important reason for the score you gave NBShare?</dt>
                                 <dd>{this.props.node.reason}</dd>
                             </>
                         )}

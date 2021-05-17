@@ -223,7 +223,7 @@ func (r *searchResolver) alertForOverRepoLimit(ctx context.Context) (*searchAler
 	}
 
 	if envvar.SourcegraphDotComMode() {
-		alert.description = "Use a 'repo:' or 'repogroup:' filter to narrow your search and see results or set up a self-hosted Sourcegraph instance to search an unlimited number of repositories."
+		alert.description = "Use a 'repo:' or 'repogroup:' filter to narrow your search and see results or set up a self-hosted NBShare instance to search an unlimited number of repositories."
 	} else {
 		alert.description = "Use a 'repo:' or 'repogroup:' filter to narrow your search and see results."
 	}

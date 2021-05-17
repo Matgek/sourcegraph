@@ -62,11 +62,11 @@ export class NavLinks extends React.PureComponent<Props> {
                     </li>
                 )}
                 <ActionsNavItems {...this.props} menu={ContributableMenu.GlobalNav} actionItemClass="nav-link" />
-                {this.props.activation && (
+                {/* {this.props.activation && (
                     <li className="nav-item">
                         <ActivationDropdown activation={this.props.activation} history={this.props.history} />
                     </li>
-                )}
+                )} */}
                 {(!this.props.showDotComMarketing ||
                     !!this.props.authenticatedUser ||
                     this.props.location.pathname !== '/welcome') && (

@@ -1,6 +1,7 @@
 import { LoadingSpinner } from '@sourcegraph/react-loading-spinner'
 import * as H from 'history'
 import { escapeRegExp, upperFirst } from 'lodash'
+import FileDocumentIcon from 'mdi-react/FileDocumentIcon'
 import FolderIcon from 'mdi-react/FolderIcon'
 import HistoryIcon from 'mdi-react/HistoryIcon'
 import SourceBranchIcon from 'mdi-react/SourceBranchIcon'
@@ -236,16 +237,22 @@ export class TreePage extends React.PureComponent<Props, State> {
                                     <div className="btn-group mb-3">
                                         <Link
                                             className="btn btn-secondary"
+                                            to={`${this.state.treeOrError.url}/-/blob/README.md`}
+                                        >
+                                            <FileDocumentIcon className="icon-inline" /> README.md
+                                        </Link>
+                                        <Link
+                                            className="btn btn-secondary"
                                             to={`${this.state.treeOrError.url}/-/commits`}
                                         >
                                             <SourceCommitIcon className="icon-inline" /> Commits
                                         </Link>
-                                        <Link className="btn btn-secondary" to={`/${this.props.repoName}/-/branches`}>
+                                        {/* <Link className="btn btn-secondary" to={`/${this.props.repoName}/-/branches`}>
                                             <SourceBranchIcon className="icon-inline" /> Branches
                                         </Link>
                                         <Link className="btn btn-secondary" to={`/${this.props.repoName}/-/tags`}>
                                             <TagIcon className="icon-inline" /> Tags
-                                        </Link>
+                                        </Link> */}
                                         <Link
                                             className="btn btn-secondary"
                                             to={
@@ -289,14 +296,14 @@ export class TreePage extends React.PureComponent<Props, State> {
                                     <SearchButton activation={this.props.activation} />
                                 </Form>
                             </section>
-                            <ReadMe
+                            {/* <ReadMe
                                 repoName={this.props.repoName}
                                 commitID={this.props.commitID}
                                 filePath={this.props.filePath + '/README.md'}
                                 isLightTheme={this.props.isLightTheme}
                                 disableTimeout={false}
                                 location={this.props.location}
-                            />
+                            /> */}
                             <TreeEntriesSection
                                 title="Files and directories"
                                 parentPath={this.props.filePath}

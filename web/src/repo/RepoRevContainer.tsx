@@ -19,13 +19,16 @@ import { IS_CHROME } from '../marketing/util'
 import { ThemeProps } from '../theme'
 import { RouteDescriptor } from '../util/contributions'
 import { CopyLinkAction } from './actions/CopyLinkAction'
+import { GoToBinderAction } from './actions/GoToBinderAction'
+import { GoToColabAction } from './actions/GoToColabAction'
+import { GoToFloydHubAction } from './actions/GoToFloydHubAction'
 import { GoToPermalinkAction } from './actions/GoToPermalinkAction'
-import { GoToRunningAction } from './actions/GoToRunningAction'
 import { CloneInProgressError, ECLONEINPROGESS, EREPONOTFOUND, EREVNOTFOUND, ResolvedRev, resolveRev } from './backend'
 import { RepoHeaderContributionsLifecycleProps } from './RepoHeader'
 import { RepoHeaderContributionPortal } from './RepoHeaderContributionPortal'
 import { EmptyRepositoryPage, RepositoryCloningInProgressPage } from './RepositoryGitDataContainer'
 import { RevisionsPopover } from './RevisionsPopover'
+import { GoToRunHelpAction } from './actions/GoToRunHelpAction'
 
 export interface RepoRevContainerContext
     extends RepoHeaderContributionsLifecycleProps,
@@ -276,7 +279,25 @@ export class RepoRevContainer extends React.PureComponent<RepoRevContainerProps,
                 <RepoHeaderContributionPortal
                     position="right"
                     priority={1}
-                    element={<GoToRunningAction key="go-to-running" location={this.props.location} />}
+                    element={<GoToBinderAction key="go-to-binder" location={this.props.location} />}
+                    repoHeaderContributionsLifecycleProps={this.props.repoHeaderContributionsLifecycleProps}
+                />
+                <RepoHeaderContributionPortal
+                    position="right"
+                    priority={1}
+                    element={<GoToFloydHubAction key="go-to-floydhub" location={this.props.location} />}
+                    repoHeaderContributionsLifecycleProps={this.props.repoHeaderContributionsLifecycleProps}
+                />
+                <RepoHeaderContributionPortal
+                    position="right"
+                    priority={1}
+                    element={<GoToColabAction key="go-to-colab" location={this.props.location} />}
+                    repoHeaderContributionsLifecycleProps={this.props.repoHeaderContributionsLifecycleProps}
+                />
+                <RepoHeaderContributionPortal
+                    position="right"
+                    priority={1}
+                    element={<GoToRunHelpAction key="go-to-run-help" location={this.props.location} />}
                     repoHeaderContributionsLifecycleProps={this.props.repoHeaderContributionsLifecycleProps}
                 />
             </div>

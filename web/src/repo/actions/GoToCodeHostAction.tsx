@@ -128,7 +128,7 @@ export class GoToCodeHostAction extends React.PureComponent<Props, State> {
         }
 
         return (
-            <LinkOrButton to={url} target="_self" data-tooltip={`View on ${displayName}`}>
+            <LinkOrButton to={url} target="_blank" data-tooltip={`View on ${displayName}`}>
                 <Icon className="icon-inline" />
             </LinkOrButton>
         )
